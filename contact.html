@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Gerlyn Portfolio</title>
+<link rel="stylesheet" href="css/index.css">
+<style>
+    body {
+        background: linear-gradient(135deg, #f8f3eb, #f2eae2);
+        font-family: 'Roboto', sans-serif;
+        color: #4a4036;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    /* NAVIGATION */
+    .nav {
+        width: 100%;
+        padding: 15px 7%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(255,255,255,0.8);
+        backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .nav-links a {
+        padding: 8px 15px;
+        border-radius: 50px;
+        margin-left: 10px;
+        color: #4a4036;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+
+    .nav-links a.active {
+        background: rgba(212,180,131,0.25);
+    }
+
+    /* CONTACT SECTION */
+    .contact-section {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 60px 20px;
+        position: relative;
+    }
+
+    /* Light glow effect behind the card */
+    .contact-section::before {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, rgba(212,180,131,0.35) 0%, transparent 70%);
+        top: -50px;
+        right: -50px;
+        filter: blur(80px);
+        z-index: 0;
+    }
+
+    .contact-section::after {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        background: radial-gradient(circle, rgba(201,166,107,0.3) 0%, transparent 70%);
+        bottom: -50px;
+        left: -50px;
+        filter: blur(60px);
+        z-index: 0;
+    }
+
+    .contact-card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background: #fffaf2;
+        border-radius: 20px;
+        padding: 40px 30px;
+        max-width: 500px;
+        width: 100%;
+        box-shadow: 0 10px 25px rgba(212,180,131,0.3);
+        z-index: 1;
+    }
+
+    .contact-card h2 {
+        margin-bottom: 10px;
+        font-size: 1.8rem;
+        color: #4a4036;
+    }
+
+    .contact-card p {
+        margin-bottom: 20px;
+        color: #8b7d70;
+        font-size: 0.95rem;
+    }
+
+    .contact-card label {
+        font-weight: 600;
+        margin-bottom: 5px;
+        color: #4a4036;
+        font-size: 0.9rem;
+    }
+
+    .contact-card input,
+    .contact-card textarea {
+        padding: 12px 18px;
+        border-radius: 12px;
+        border: none;
+        background: #f0ebe3;
+        box-shadow: inset 3px 3px 6px rgba(0,0,0,0.05), inset -3px -3px 6px rgba(255,255,255,0.7);
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        width: 100%;
+        resize: none;
+    }
+
+    .contact-card input:focus,
+    .contact-card textarea:focus {
+        outline: none;
+        transform: scale(1.02);
+        box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1), inset -2px -2px 5px rgba(255,255,255,0.9);
+    }
+
+    .contact-card button {
+        padding: 15px 0;
+        border-radius: 50px;
+        border: none;
+        font-weight: 600;
+        background: linear-gradient(135deg, #d4b483, #c9a66b);
+        color: white;
+        font-size: 1rem;
+        cursor: pointer;
+        box-shadow: 0 6px 18px rgba(212,180,131,0.3);
+        transition: all 0.3s ease;
+    }
+
+    .contact-card button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(212,180,131,0.4);
+    }
+
+    @media (max-width: 650px) {
+        .contact-card {
+            padding: 30px 20px;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<header class="nav">
+    <div class="pill soft">My Portfolio<span class="logo-dot">.</span></div>
+
+    <nav class="nav-links">
+        <a href="index.html" class="btn outline">Home</a>
+        <a href="about.html" class="btn outline">About</a>
+        <a href="photos.html" class="btn outline">Photos</a>
+        <a href="contact.html" class="btn outline active">Contact</a>
+    </nav>
+
+    <a class="btn ghost" href="contact.html">Hire Me</a>
+</header>
+
+<!-- CONTACT SECTION -->
+<section class="section contact-section">
+    <div class="contact-card">
+        <h2>Contact Me</h2>
+        <p>Send me a message to discuss projects, ideas, or opportunities.</p>
+
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your Name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your Email">
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+</section>
+
+</body>
+</html>

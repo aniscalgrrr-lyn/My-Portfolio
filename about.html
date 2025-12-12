@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Gerlyn Portfolio</title>
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        /* ABOUT SECTION */
+        .about-section {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: start;
+            padding: 50px 20px;
+        }
+
+        .about-photo {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .about-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .about-content p {
+            font-size: 1rem;
+            color: #5c5147;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills span {
+            padding: 8px 16px;
+            background: #d4b483;
+            color: #fff;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 950px) {
+            .about-section {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .about-photo {
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<header class="nav">
+    <div class="pill soft">My Portfolio<span class="logo-dot">.</span></div>
+
+    <nav class="nav-links">
+        <a href="index.html" class="btn outline">Home</a>
+        <a href="about.html" class="btn outline active">About</a>
+        <a href="photos.html" class="btn outline">Photos</a>
+        <a href="contact.html" class="btn outline">Contact</a>
+    </nav>
+
+    <a class="btn ghost" href="contact.html">Hire Me</a>
+</header>
+
+<!-- ABOUT SECTION -->
+<section class="section">
+    <div class="section-header">
+        <h2>About Me</h2>
+        <p class="muted">A professional overview of my skills and experience.</p>
+    </div>
+
+    <div class="about-section">
+        <!-- PHOTO -->
+        <div>
+            <img src="images/ako again.jpg" alt="Gerlyn Photo" class="about-photo">
+        </div>
+
+        <!-- CONTENT -->
+        <div class="about-content">
+            <h3>Hello! I'm Gerlyn 👋</h3>
+            <p>
+                I am a passionate UI/UX Designer focused on creating clean, modern, and user-centered 
+                digital experiences. I enjoy transforming ideas into intuitive interfaces and functional designs.
+            </p>
+
+            <h3>Skills</h3>
+            <div class="skills">
+                <span>UI/UX Design</span>
+                <span>Wireframing</span>
+                <span>Prototyping</span>
+                <span>HTML/CSS</span>
+                <span>JavaScript</span>
+                <span>Figma</span>
+            </div><br>
+
+            <h3>Experience</h3>
+            <ul>
+                <li>Freelance UI/UX Designer – 2022 to Present</li>
+                <li>Web Designer Intern – IDEO Company 2021</li>
+                <li>Designed responsive websites and UI for multiple clients</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
